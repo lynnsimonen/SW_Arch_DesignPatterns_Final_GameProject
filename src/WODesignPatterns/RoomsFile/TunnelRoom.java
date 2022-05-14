@@ -3,7 +3,7 @@ package WODesignPatterns.RoomsFile;
 import WODesignPatterns.MagicalCreatures.*;
 import WODesignPatterns.MagicalGiftItems.MagicalGifts;
 
-public class TunnelRoom implements Rooms, RoomStrategy {
+public class TunnelRoom implements Rooms {
     //FACTORY FOR CREATURES!!!
     private Creatures creatureType = CreatureFactory.GetCreature("GurglingFish");
     private String roomName = "Tunnel Room";

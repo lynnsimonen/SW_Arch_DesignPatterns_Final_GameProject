@@ -20,7 +20,6 @@ public class GamePlay {
 
     public static void startGame() {            //<------------------------------------------------ startGame()
         MainPlayer mainPlayer = new MainPlayer();
-        Rooms newRoom = new RavineRoom();
         String response = "";
         do {
             try {
@@ -49,13 +48,10 @@ public class GamePlay {
                 }
             }
             while (response == null);
-
             mainPlayer.setName(playerName);
             System.out.println("\n" + mainPlayer.getName() +
                     ", you are now entering the adventure game.\n");
-            moves();
-            System.out.println(newRoom.getRoomStory());
-            //newRoom.
+            Rooms newRoom = new RavineRoom();
             chooseMove(mainPlayer, newRoom);        // <------------------------------------------------- CHOOSE MOVE!
             //interact with room until exit to new room
         } else if (response.toUpperCase().equals("END")) {
@@ -64,6 +60,8 @@ public class GamePlay {
     }
 
     private static void chooseMove(MainPlayer mainPlayer, Rooms newRoom) {
+        moves();
+        System.out.println(newRoom.getRoomStory());
         boolean chooseAgain = Boolean.parseBoolean(null);
         String choice = "";
         String roomAccess = "";

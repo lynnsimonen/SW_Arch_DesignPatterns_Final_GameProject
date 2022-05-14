@@ -4,7 +4,7 @@ import WODesignPatterns.MagicalCreatures.CreatureFactory;
 import WODesignPatterns.MagicalCreatures.Creatures;
 import WODesignPatterns.MagicalGiftItems.MagicalGifts;
 
-public class CaveRoom implements Rooms, RoomStrategy {
+public class CaveRoom implements Rooms {
     //FACTORY FOR CREATURES!!!
     private Creatures creatureType = CreatureFactory.GetCreature("Oger");
     private String roomName = "Cave Room";

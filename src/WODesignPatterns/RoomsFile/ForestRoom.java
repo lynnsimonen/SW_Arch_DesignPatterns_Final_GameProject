@@ -5,7 +5,7 @@ import WODesignPatterns.MagicalCreatures.Creatures;
 import WODesignPatterns.MagicalCreatures.Elf;
 import WODesignPatterns.MagicalGiftItems.MagicalGifts;
 
-public class ForestRoom implements Rooms, RoomStrategy {
+public class ForestRoom implements Rooms {
     //FACTORY FOR CREATURES!!!
     //private Creatures creatureType = CreatureFactory.GetCreature("Elf");            //component property
     private Creatures creatureType = new Elf();
